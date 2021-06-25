@@ -1,0 +1,15 @@
+.btnClose{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    color:white;
+    border: 0px;
+    padding: 0px;
+    background-color: rgb(192, 13, 0);
+    z-index: 10;
+    transition: all .5s !important;
+}
+.btnClose:hover{
+    width: 30px;
+    height: 30px;
+}
