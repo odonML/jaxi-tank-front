@@ -6,16 +6,17 @@ import classes from "./CardTask.module.css";
 import ModalUpdate from "../ui/ModalUpdate";
 
 function CardTask(props) {
-  const [showModal, setModal] = useState(false);
+  const [showModal, setModalTask] = useState(false);
 
   const [deleteTask] = useMutation(DELETE_TASK);
   const [updateTask] = useMutation(UPDATE_TASK);
 
   const verModal = () => {
-    setModal(true);
+    setModalTask(true);
   }
   const closeModal = () => {
-    setModal(false);
+    console.log("cerrarModal")
+    setModalTask(false);
   }
 
   const deletetask = (id) => {
@@ -24,17 +25,18 @@ function CardTask(props) {
       window.location.reload();
     });
   };
-
-  const updateModal = (id, data) => {
+  
+  const updateModalTask = (id, data) => {
     console.log(id, data);
     updateTask({variables: { id: id, input: data}}).then((e) => {
       console.log(e);
+      window.location.reload();
     })
   };
 
   return (
     <div className={classes.card}>
-      <div className={classes.bodyCard}>
+      <div className={classes.bodyCard} onClick={verModal}>
         <h3 class="title">{props.title}</h3>
         <p>{props.description}</p>
       </div>
@@ -53,7 +55,7 @@ function CardTask(props) {
         />
       </div>
 
-      {showModal ? <ModalUpdate onClose={closeModal} id={props._id} update={updateModal}/> : null}
+      {showModal ? <ModalUpdate section="Task" onClose={closeModal} id={props._id} {...props} update={updateModalTask}/> : null}
     </div>
   );
 }
