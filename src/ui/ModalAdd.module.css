@@ -1,0 +1,57 @@
+.aling{
+  position: absolute;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  width:100%;
+}
+.modal {
+  position: absolute;
+  background-color: white;
+  border-radius: 10%;
+  height: auto;
+  width: 300px;
+  margin-top: 150px;
+  padding: 25px 20px;
+  z-index: 10;
+  animation-name: show;
+  animation-duration: .5s;
+}
+.form{
+  /* border: 1px solid blue; */
+  height: 90%;
+  width: 100%;
+}
+h4{
+  padding:0px;
+  margin:0px;
+}
+.control label, input, textarea{
+  /* background-color: aqua;
+  border: 1px solid red; */
+  width:100%;
+}
+.buttons{
+  position: relative;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+  /* border: 1px solid yellow; */
+}
+
+.vacio{
+  color: red;
+  font-size: 12px;
+  animation-name: show;
+  animation-duration: .2s;
+}
+@keyframes show {
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,51 @@
+  .modal {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    z-index: 4;
+    animation-name: show;
+    animation-duration: .5s;
+  }
+  .form{
+    /* border: 1px solid blue; */
+    height: auto;
+    width: 100%;
+  }
+  h4{
+    padding:0px;
+    margin:0px;
+  }
+  .control label, input{
+    /* background-color: aqua;
+    border: 1px solid red; */
+    width:100%;
+  }
+  .buttons{
+    position: relative;
+    margin-top: 5px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    /* border: 1px solid yellow; */
+  }
+  .buttons button{
+    border: 1px solid rgb(255, 123, 0);
+  }
+  .vacio{
+    color: red;
+    font-size: 12px;
+    animation-name: show;
+    animation-duration: .2s;
+  }
+  @keyframes show {
+    0%{
+      opacity:0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
