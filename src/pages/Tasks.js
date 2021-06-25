@@ -34,7 +34,7 @@ function Tasks() {
         <ListTask/>
       </div>
 
-      {showModal ? <ModalAdd onClose={closeModal} add={addTask}/> : null}
+      {showModal ? <ModalAdd section="Task" onClose={closeModal} add={addTask}/> : null}
       {showModal && <Backdrop onCancel={closeModal}/>}
     </div>
   );
